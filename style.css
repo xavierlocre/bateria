@@ -43,7 +43,6 @@ body {
     background-color: transparent;
     border: solid;
     box-shadow:inset;
-
     border-radius: 50%;
     margin: 10px;
     cursor: pointer;
@@ -65,3 +64,48 @@ nav ul li a {
     text-decoration: none;
     color: #333;
 }
+.sonidoboton[data-key="65"] {
+    position: fixed;
+    top: 380px;
+    left: 590px;
+}
+.sonidoboton[data-key="83"] {
+    position: fixed;
+    top: 550px;
+    left: 540px;
+}
+.sonidoboton[data-key="68"] {
+    position: fixed;
+    top: 690px;
+    left: 490px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
