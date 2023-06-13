@@ -10,49 +10,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <nav>
-    <img src="img/logo.png" alt="Este es el logo" />
+    <img src="img/logo.png" alt="logo">
     <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Ejercicios</a></li>
+        <li>
+            <a href="#">Instrumentos</a>
+            <ul>
+                <li><a href="#">Batería</a></li>
+                <li><a href="#">Bajo</a></li>
+                <li><a href="#">Guitarra</a></li>
+                <li><a href="#">Marimba</a></li>
+                <li><a href="#">Ukelele</a></li>
+            </ul>
+        </li>
         <li><a href="#">Contacto</a></li>
     </ul>
+    <div class="buttons">
+        <button><strong> Crear cuenta </strong></button>
+        <button><strong>Iniciar sesión </strong></button>
+    </div>
 </nav>
 
 <body>
     <section class="imagenfondo"><img src="img/fondo_web.png" alt="Fondo de pantalla">
     </section>
-    <div class="bateria">
-        <img src="img/bateria.png" alt="Imagen">
-    </div>
+    <!-- <div class="bateria">
+        <img src="img/bateria.png" alt="Imagen"> 
+    </div> -->
+    <div class="contenedor-bateria">
     <div class="mp3">
         <button class="sonidoboton" data-key="65">A</button>
         <button class="sonidoboton" data-key="83">S</button>
         <button class="sonidoboton" data-key="68">D</button>
 
+        <button class="sonidoboton" data-key="78">N</button>
+        <button class="sonidoboton" data-key="70">F</button>
+        <button class="sonidoboton" data-key="71">G</button>
+        <button class="sonidoboton" data-key="72">H</button>
 
-
-
-
-
-
-
-
-
+        <button class="sonidoboton" data-key="74">J</button>
+        <button class="sonidoboton" data-key="75">K</button>
+        <button class="sonidoboton" data-key="76">L</button>
+        <button class="sonidoboton" data-key="90">Z</button>
+        <button class="sonidoboton" data-key="88">X</button>
+        <button class="sonidoboton" data-key="67">C</button>
     </div>
+</div>
     <audio data-key="65" src="audio/CRMA16  FD-LR.wav"></audio>
-    <audio data-key="83" src="audio/borde snare{.wav"></audio>
+    <audio data-key="83" src="audio/CRMA18  FD-LR.wav"></audio>
     <audio data-key="68" src="audio/CRMA16 MFD-LR.wav"></audio>
+    <audio data-key="78" src="audio/borde snare{.wav"></audio>
+    <audio data-key="70" src="audio/hh 3.wav"></audio>
+    <audio data-key="71" src="audio/hh 2.wav"></audio>
+    <audio data-key="72" src="audio/hh 4.wav"></audio>
+    <audio data-key="74" src="audio/snare 3.wav"></audio>
+    <audio data-key="75" src="audio/snare.wav"></audio>
+    <audio data-key="76" src="audio/snare suave.wav"></audio>
+    <audio data-key="90" src="audio/snare 2.wav"></audio>
+    <audio data-key="88" src="audio/TM 8HIT FD-LR.wav"></audio>
+    <audio data-key="67" src="audio/TM10HIT FD-LR.wav"></audio>
 
-
-
-
-
-
-
-    
-
-    
+    <div class="footer">
+        <img src="img/imagen2_footer.jpg"  alt="Imagen de footer" style="max-width: 100%; height: auto;">
     <script src="main.js"></script>
 </body>
 

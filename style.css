@@ -22,18 +22,32 @@ body {
     height: 100vh;
 }
 .bateria img {
-    max-width: 100%;
+    /* max-width: 100%;
     max-height: 100%;
     width: 59%;
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%;  */
+    width: 1200px;
 }
-.mp3 {
+.contenedor-bateria{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-top: 240px;
+}
+.mp3 {
+    background-image: url(img/bateria.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 100vh;
 }
 .sonidoboton {
@@ -50,41 +64,316 @@ body {
 .sonidoboton:focus {
     outline: none;
 }
+nav {
+    font-size: 20px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center; /* Alinea el menú a la derecha */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    width: 100%;
+}
 nav ul {
-    list-style-type: none;
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
+    width: 70%;
+    justify-content: center;
 }
 nav ul li {
-    display: inline;
-    margin-right: 10px;
-    list-style-type: none;
+    display: inline-block;
+    position: relative;
 }
 nav ul li a {
+    display: block;
+    padding: 10px 20px;
     text-decoration: none;
+    color: black;
+}
+  /* Estilos para el menú desplegable */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #F9F9F9;
+    padding: 0;
+}
+nav ul li:hover ul {
+    display: block;
+}
+nav ul li ul li {
+    display: block;
+}
+nav ul li ul li a {
+    padding: 10px 20px;
     color: #333;
 }
-.sonidoboton[data-key="65"] {
-    position: fixed;
-    top: 380px;
-    left: 590px;
+  /* Estilos para los botones */
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 50px; /* Espacio entre los botones y el menú */
+    font-weight: bolder;
+    width: 30%;
 }
-.sonidoboton[data-key="83"] {
-    position: fixed;
-    top: 550px;
-    left: 540px;
+.buttons-button {
+    margin-left: 10px; /* Espacio entre los botones */
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius:50px;
+    cursor: pointer;
+    font-weight: bolder;
 }
-.sonidoboton[data-key="68"] {
+.cabeza {
+    width: 100%;
+}
+.footer img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+}
+.sonidoboton[data-key="65"] { /*BOTON A */
     position: fixed;
-    top: 690px;
-    left: 490px;
+    position: absolute;
+    margin-top: -800px;
+    margin-left: -665px;
+}
+.sonidoboton[data-key="83"] {/*BOTON S */
+    /* position: fixed; */
+    position: absolute;
+    top: 490px;
+    left: 510px;
+}
+.sonidoboton[data-key="68"] {/*BOTON D */
+    position: fixed;
+    position: absolute;
+    top: 630px;
+    left: 470px;
+}
+.sonidoboton[data-key="90"] {/*BOTON Z */
+    position: fixed;
+    position: absolute;
+    top: 510px;
+    left: 875px;
+}
+.sonidoboton[data-key="88"] {/*BOTON X */
+    position: fixed;
+    position: absolute;
+    top: 630px;
+    left: 1030px;
+}
+.sonidoboton[data-key="67"] {/*BOTON C */
+    position: fixed;
+    position: absolute;
+    top: 570px;
+    left: 1295px;
+}
+.sonidoboton[data-key="74"] {/*BOTON K */
+    position: fixed;
+    position: absolute;
+    top: 630px;
+    left: 720px;
+}
+.sonidoboton[data-key="75"] {/*BOTON J */
+    position: fixed;
+    position: absolute;
+    top: 415px;
+    left: 715px;
+}
+.sonidoboton[data-key="76"] {/*BOTON L */
+    position: fixed;
+    position: absolute;
+    top: 350px;
+    left: 875px;
+}
+.sonidoboton[data-key="78"] {/*BOTON N */
+    position: fixed;
+    position: absolute;
+    top: 410px;
+    left: 1055px;
+}
+.sonidoboton[data-key="70"] {/*BOTON F */
+    position: fixed;
+    position: absolute;
+    top: 285px;
+    left: 760px;
+}
+.sonidoboton[data-key="71"] {/*BOTON G */
+    position: fixed;
+    position: absolute;
+    top: 285px;
+    left: 990px;
+}
+.sonidoboton[data-key="72"] {/*BOTON H */
+    position: fixed;
+    position: absolute;
+
+    /* top: 320px;
+    left: 1220px; */
+}
+.sonidoboton[data-key="65"].active {
+    animation: shake 0.8s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
 }
 
+.sonidoboton[data-key="83"].active {
+    animation: shake 0.4s linear;
+}
+    @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
 
+.sonidoboton[data-key="68"].active {
+    animation: shake 0.4s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+.sonidoboton[data-key="90"].active {
+    animation: shake 0.8s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
 
+.sonidoboton[data-key="88"].active {
+    animation: shake 0.4s linear;
+}
+    @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
 
+.sonidoboton[data-key="67"].active {
+    animation: shake 0.4s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
 
+.sonidoboton[data-key="76"].active {
+    animation: shake 0.4s linear;
+}
+    @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+.sonidoboton[data-key="74"].active {
+    animation: shake 0.4s linear;
+}
+    @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
 
+.sonidoboton[data-key="75"].active {
+    animation: shake 0.4s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.sonidoboton[data-key="78"].active {
+    animation: shake 0.4s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+.sonidoboton[data-key="70"].active {
+    animation: shake 0.4s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+.sonidoboton[data-key="71"].active {
+    animation: shake 0.4s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+.sonidoboton[data-key="72"].active {
+    animation: shake 0.4s linear;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+@media screen and (max-width:600px){
+    .sonidoboton[data-key="65"] {
+        /* osition: fixed;
+        position: absolute; */
+        margin-top: 450px;
+        margin-left: 300px;
+    }
+}
 
 
 
