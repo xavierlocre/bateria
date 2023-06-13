@@ -224,8 +224,8 @@ nav ul li ul li a {
     position: fixed;
     position: absolute;
 
-    /* top: 320px;
-    left: 1220px; */
+    top: 320px;
+    left: 1220px;
 }
 .sonidoboton[data-key="65"].active {
     animation: shake 0.8s linear;
