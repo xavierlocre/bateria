@@ -126,6 +126,7 @@ nav ul li ul li a {
     align-items: center;
     margin-right: 50px; /* Espacio entre los botones y el menú */
     font-weight: bolder;
+    border-radius:50px;
     width: 30%;
 }
 .buttons-button {
